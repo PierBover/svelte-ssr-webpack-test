@@ -1,7 +1,16 @@
+const path = require('path');
+const NodeExternals = require('webpack-node-externals');
+
 module.exports = {
 	mode: 'production',
 	target: 'node',
 	entry: './index.js',
+	resolve: {
+		alias: {
+			svelte: path.resolve('node_modules', 'svelte')
+		}
+	},
+	externals: [NodeExternals()],
 	module: {
 		rules: [
 			{
@@ -10,11 +19,13 @@ module.exports = {
 				use: {
 					loader: 'svelte-loader',
 					options: {
-						dev: false,
-						immutable: true,
-						generate: 'ssr',
-						emitCss: false,
-						hydratable: true
+						compilerOptions: {
+							dev: false,
+							immutable: true,
+							generate: 'ssr',
+							css: false,
+							hydratable: true
+						}
 					}
 				}
 			},
