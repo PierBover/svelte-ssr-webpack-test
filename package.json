@@ -1,0 +1,28 @@
+{
+  "name": "svelte-ssr-webpack-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production webpack && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierBover/svelte-ssr-webpack-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierBover/svelte-ssr-webpack-test/issues"
+  },
+  "homepage": "https://github.com/PierBover/svelte-ssr-webpack-test#readme",
+  "devDependencies": {
+    "svelte": "^3.38.3"
+  },
+  "dependencies": {
+    "svelte-loader": "^3.1.2",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
